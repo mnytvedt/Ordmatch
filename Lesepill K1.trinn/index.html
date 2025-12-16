@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordmatch Spill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="menu">
+            <h1>🎮 Ordmatch Spill</h1>
+            <p>Velg en kategori og match ordene!</p>
+            <button class="btn-category" onclick="startGame('colors')">🌈 Farger</button>
+            <button class="btn-category" onclick="startGame('animals')">🦁 Dyr</button>
+        </div>
+
+        <div class="game" id="game" style="display: none;">
+            <div class="game-header">
+                <div class="category-title" id="categoryTitle"></div>
+                <div class="timer">⏱️ <span id="timer">0</span>s</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="question-container">
+                <div class="question" id="question"></div>
+                <div class="options" id="options"></div>
+            </div>
+
+            <button id="backBtn" class="btn-back" onclick="backToMenu()">← Tilbake</button>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Resultat!</h2>
+            <div class="stars" id="stars"></div>
+            <div class="stats">
+                <p>Tid: <strong id="finalTime"></strong>s</p>
+                <p>Korrekte svar: <strong id="correctAnswers"></strong>/10</p>
+            </div>
+            <button class="btn-back" onclick="backToMenu()">← Tilbake til meny</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
